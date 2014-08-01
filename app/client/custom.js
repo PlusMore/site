@@ -1,17 +1,15 @@
 /* -- Full Screen Viewport Container
    ---------------------------- */
 
-$(window).load(function(){
-    $('.preloader').fadeOut(1000); // set duration in brackets
-    init();
-});
 
-$(document).ready(function() {
+Meteor.startup(function() {
+  $('.preloader').fadeOut(1000); // set duration in brackets
+  init();
+  isotope();
   fullScreenContainer();
   owlCarousel();
   magnificPopup();
 });
-
 
 
 /* --- initialize functions on window load here -------------- */
