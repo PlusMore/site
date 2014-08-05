@@ -1568,7 +1568,7 @@ section.cta h1 {
 }
 section.cta h2 {
   font-size: 2.5em;
-  margin: 0 auto 1em;
+  margin: 0 auto .5em;
 }
 section.cta h3 {
   font-weight: 1.2em;
@@ -2355,6 +2355,9 @@ footer.footer .icon {
 .modal-form .close:hover:after {
   background: #777;
   transition: all 0.2s linear;
+}
+.tablet-img {
+  margin-top: 8em;
 }
 @media (max-width: 992px) {
   .cbp-af-header h1,
