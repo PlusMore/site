@@ -1513,15 +1513,17 @@ section.light {
   background: #ededed;
 }
 section.light.with-bg {
-  background: url('../img/bg-content1.jpg') center center no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 section.dark {
   background: #2b2d35;
 }
 section.dark.with-bg {
-  background: url('../img/bg-content1.jpg') center center no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 section.dark h1,
 section.dark h2,
@@ -2361,7 +2363,7 @@ footer.footer .icon {
   transition: all 0.2s linear;
 }
 .tablet-img {
-  margin-top: 8em;
+  margin-top: 7em;
 }
 @media (max-width: 992px) {
   .cbp-af-header h1,
