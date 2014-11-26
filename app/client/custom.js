@@ -3,13 +3,19 @@
 
 
 Meteor.startup(function() {
-  $('.preloader').fadeOut(1000); // set duration in brackets
-  init();
+  console.log('startup');
   isotope();
   fullScreenContainer();
   owlCarousel();
   magnificPopup();
 });
+
+$(window).load(function(){
+  console.log('loaded');
+  $('.preloader').fadeOut(1000); // set duration in brackets
+  init();
+});
+
 
 
 /* --- initialize functions on window load here -------------- */
