@@ -9,3 +9,8 @@ insecure
 bootstrap-3
 font-awesome
 jquery
+meteorhacks:inject-initial
+coffeescript
+less
+natestrauser:animate-css
+cwaring:modernizr
