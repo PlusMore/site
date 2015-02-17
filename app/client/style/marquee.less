@@ -1,0 +1,35 @@
+@import '/client/style/imports.import.less';
+
+.marquee {
+  height: 25px;
+  width: 100%;
+
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 30px;
+
+  position: absolute;
+  overflow: hidden;
+
+  .animation(marquee 30s linear infinite);
+}
+
+.marquee span {
+  float: left;
+  width: 15%;
+}
+
+@-webkit-keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
