@@ -1,0 +1,90 @@
+@import '/client/style/imports.import.less';
+
+footer#footer {
+  background: #2b2d35;
+  padding: 5em 0;
+  color: white;
+
+  .footer-logo {
+    padding: 0 1em;
+
+    h2 {
+      color: #fff;
+    }
+
+    p, a {
+      font-size: 0.9em;
+      margin-right: 10px;
+      color: #fff;  
+    }
+
+    a:hover {
+      color: #fff;
+      text-decoration: none;    
+    }
+
+  }
+  
+  h2 {
+    text-transform: uppercase;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    margin-top: 2.1em;
+    margin-bottom: 1em;
+  }
+
+  .label {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  ul {
+    margin-bottom: 4em;
+    li {
+      display: block;
+      margin-bottom: 0.75em;
+
+      a {
+        color: #C9CACC;
+
+        &:hover {
+          color: #88b7b3;
+          text-decoration: none;        
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 2;
+    font-weight: 200;
+    letter-spacing: 0.7px;
+  }
+
+  .logo {
+    padding: 1em 0 0;
+  }
+
+  .icon {
+    font-size: 1.5em;
+    margin: 1.5em 0.75em 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  footer#footer h2 {
+    font-size: 1.7em;
+    margin-bottom: 0.7em;
+  }
+}
+
+@media (max-width: 767px) {
+  footer#footer h2 {
+    font-size: 1.7em;
+    margin-bottom: 0.7em;
+  }
+}
