@@ -6,7 +6,6 @@ binary-heap@1.0.2
 blaze@2.0.4
 blaze-tools@1.0.2
 boilerplate-generator@1.0.2
-bootstrap-3@0.0.0
 callback-hook@1.0.2
 check@1.0.4
 coffeescript@1.0.5
@@ -16,8 +15,6 @@ deps@1.0.6
 ejson@1.0.5
 fastclick@1.0.2
 follower-livedata@1.0.3
-font-awesome@0.0.0
-fortawesome:fontawesome@4.2.0_2
 geojson-utils@1.0.2
 html-tools@1.0.3
 htmljs@1.0.3
