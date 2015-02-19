@@ -1,7 +1,7 @@
 @import '/client/style/imports.import.less';
 
 section {
-  padding: 4em 0;
+  padding: 2em 0;
   position: relative;
 
   h1 {
@@ -15,6 +15,12 @@ section {
   div.example {
     font-size: @20px;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 767px) {
+  section#hotel-services {
+    padding-top: 3em;
   }
 }
 
@@ -76,16 +82,6 @@ section.dark p {
 section .overlay-text {
   z-index: 10;
 }
-section#hotel-services {
-  img {
-    margin-top: 20px;
-  }
-}
-section#digital-concierge {
-  img {
-    margin-top: 60px;
-  }
-}
 section#end-to-end {
   h1 {
     margin-bottom: 10px;
@@ -115,6 +111,25 @@ section#end-to-end {
         margin-top: 33px;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 4em 0;
+  }
+  section#hotel-services {
+    img {
+      margin-top: 20px;
+    }
+  }
+  section#digital-concierge {
+    img {
+      margin-top: 60px;
+    }
+  }
+  section#end-to-end {
+    padding-top: 1em;
   }
 }
 

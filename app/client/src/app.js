@@ -1,6 +1,5 @@
 /* -- Full Screen Viewport Container
    ---------------------------- */
-Session.setDefault('loader', ' ');
 
 Meteor.startup(function() {
   console.log('startup');
@@ -10,9 +9,6 @@ Meteor.startup(function() {
 $(window).load(function(){
   console.log('loaded');
   $('.app-loader').fadeOut(1000); // set duration in brackets
-  Meteor.setTimeout(function() {
-    Session.set('loader', undefined);
-  }, 1000)
 });
 
 App = function() {
