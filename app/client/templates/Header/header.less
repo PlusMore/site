@@ -121,6 +121,16 @@
   -webkit-transition: height 0.3s linear;
   -moz-transition: height 0.3s linear;
   transition: height 0.3s linear;
+
+  #site-nav {
+    z-index: 1;
+    opacity: 1;
+  }
+
+  #page-nav {
+    z-index: 0;
+    opacity: 0;
+  }
 }
 .cbp-af-header .dropdown-menu {
   position: absolute;
@@ -172,7 +182,8 @@
 
 @media(min-width: 992px) {
   .cbp-af-header .nav {
-    float: right;
+    position: absolute;
+    right: 20px;
     a {
       margin: 0 0 0 20px;
     }
@@ -197,36 +208,50 @@
   height: 70px;
   background-color: rgba(255,255,255,.9);
   border-bottom: 1px solid #eee;
-}
-.cbp-af-header.cbp-af-header-shrink .dropdown-menu {
-  position: absolute;
-  top: 100%;
-}
-.cbp-af-header.cbp-af-header-shrink h1,
-.cbp-af-header.cbp-af-header-shrink .nav a {
-  line-height: 40px;
-  color: black;
-}
-.cbp-af-header.cbp-af-header-shrink .nav a.btn {
-  line-height: 1.7;
-  margin-top: 0.9em;
-}
-.cbp-af-header.cbp-af-header-shrink .nav a.login:before {
-  top: 34%;
-  height: 20px;
-}
-.cbp-af-header.cbp-af-header-shrink h1 {
-  font-size: 1.2em;
-}
-.cbp-af-header.cbp-af-header-shrink h1 a {
-  color: black;
-  line-height: 40px;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+  }
+
+  h1, .nav a {
+    line-height: 40px;
+    color: black;
+  }
+
+  .nav a.btn {
+    line-height: 1.7;
+    margin-top: 0.9em;
+  }
+
+  .nav a.login:before {
+    top: 34%;
+    height: 20px;
+  }
+
+  h1 {
+    font-size: 1.2em;
+
+    a {
+      color: black;
+      line-height: 40px;     
+    }
+  }
+
+  #site-nav {
+    z-index: 0;
+    opacity: 0;
+  }
+
+  #page-nav {
+    z-index: 1;
+    opacity: 1;
+  }
 }
 
 @media(min-width: 992px) {
   .cbp-af-header.cbp-af-header-shrink h1 {
     margin: 0;
-
   }
 }
 
