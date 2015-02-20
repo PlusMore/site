@@ -2,7 +2,7 @@
   <div class="modal-dialog">
     <i class="icon icon-x close" data-dismiss="modal"></i>
     <div class="modal-content">
-      <div class="col-md-6 no-padding">
+      <div class="col-sm-6 no-padding">
         <div class="modal-header">
           <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
           <h1 class="modal-title" id="myModalLabel">We want to hear you out!</h1>
@@ -10,7 +10,7 @@
         </div>  
       </div>
 
-      <div class="col-md-6 no-padding">
+      <div class="col-sm-6 no-padding">
         {{#autoForm id='requestDemo' schema=requestDemoSchema type="method" meteormethod="requestDemo" resetOnSuccess=false}}
         <div class="modal-body">
           {{> afQuickField name="name" placeholder="Name"}}
