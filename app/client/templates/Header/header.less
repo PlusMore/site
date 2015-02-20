@@ -5,8 +5,11 @@
   border: none;
   padding: 1em 0;
 
-  .navbar-nav .current > a {
-    color: @primaryColor !important;
+  .navbar-nav {
+    margin: 0;
+    .current > a {
+      color: @primaryColor !important;
+    }
   }
 
   .nav {
@@ -131,7 +134,7 @@
   font-size: inherit;
 }
 .cbp-af-header .nav {
-  float: right;
+  
 }
 .cbp-af-header .nav li.open > a {
   background: none;
@@ -145,10 +148,19 @@
 .cbp-af-header .nav a {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
-  margin: 0 0 0 20px;
   font-size: 1em;
   text-transform: uppercase;
 }
+
+@media(min-width: 992px) {
+  .cbp-af-header .nav {
+    float: right;
+    a {
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
 .cbp-af-header .nav a.signup {
   color: @primaryColor !important;
 }
