@@ -1,5 +1,5 @@
 <template name="Header">
-  <div class="navbar-wrapper cbp-af-header">
+  <div class="navbar-wrapper cbp-af-header {{headerClass}}">
     <div class="container-fluid">
 
       <!-- Fixed navbar -->
@@ -13,18 +13,22 @@
               <span class="icon-bar"></span>
             </button>
             <h1>
-              <a class="navbar-brand scroll" href="#intro">
+              <a class="navbar-brand" href="{{pathFor 'Home'}}">
                 <i class="icon icon-logo"></i>
                 <span>PlusMore</span>
               </a>
             </h1>
           </div>
           <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul id="site-nav" class="nav navbar-nav">
+              <li><a href="{{pathFor 'Product'}}">Product</a></li>
+            </ul>
+            <ul id="page-nav" class="nav navbar-nav">
               <li><a href="#hotel-services">Hotel Services</a></li>
               <li><a href="#digital-concierge">Digital Concierge</a></li>
               <li><a href="#end-to-end">Our Solution</a></li>
             </ul>
+
           </div>
         </div>
       </div>
