@@ -1,15 +1,120 @@
 @import '/client/style/imports.import.less';
 
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: #000;
+.modal {
+  .modal-backdrop {
+    background-color: rgba(39, 182, 175, .95);
+
+    &.in {
+      opacity: 1;
+    }
+  }
+
+  .modal-dialog {
+    
+    .icon-x.close {
+      color: #fff;
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      font-size: @21px;
+      z-index: 100;
+    }
+
+    .modal-content {
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+      background: transparent;
+      color: #fff;
+
+      .modal-header {
+        border-bottom: 0;
+
+        .modal-title {
+          color: #fff;
+          font-size: @36px;
+          line-height: 1.2;
+        }
+
+        p.lead {
+          margin-top: @20px;
+          font-size: @19px;
+          font-family: @fontHeader;
+        }
+      }
+
+      .modal-body {
+        padding-top: 0;
+
+        .form-group {
+          .control-label {
+            display: none;
+          }
+
+          .form-control {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            font-family: @fontHeader;
+            font-size: @19px;
+            height: 44px;
+
+            &::-webkit-input-placeholder {
+               color: #fff;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+               color: #fff;  
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+               color: #fff;  
+            }
+
+            &:-ms-input-placeholder {  
+               color: #fff;  
+            }
+          }
+        }
+      }
+
+      .modal-footer {
+        border-top: 0;
+        padding-top: 0;
+
+        .btn {
+          font-size: 19px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
 }
-.modal-content {
-    box-shadow: none;
-    border-radius: 0;
-    border: solid 10px rgba(255,255,255,0.6)
+
+@media(min-width: 768px) {
+
+  .modal {
+    .modal-dialog {
+      width: 80vw;
+      
+      .icon-x.close {
+        position: absolute;
+        right: -30px;
+        bottom: 10px;
+      }
+      .modal-content {
+        padding-top: 200px;
+
+        .modal-header {
+          padding-top: 0;
+          padding-left: 0;
+
+          p.lead {
+            font-size: @24px;
+          }
+        }
+      }
+    }
+  }
+
 }
