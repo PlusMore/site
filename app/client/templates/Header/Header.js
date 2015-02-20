@@ -5,10 +5,8 @@ Template.Header.helpers({
 });
 
 Tracker.autorun(function() {
-  if (!(ResponsiveHelpers.isXs() || ResponsiveHelpers.isSm())) {
-    if (Session.get('pageScroll') > 50) {
-      return Session.set('shrinkHeader', true); 
-    }
-  } 
-  Session.set('shrinkHeader', false);
+  if (Session.get('pageScroll') > 50) {
+    return Session.set('shrinkHeader', true); 
+  }
+  return Session.set('shrinkHeader', false);
 });
