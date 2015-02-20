@@ -4,51 +4,92 @@
   background: none;
   border: none;
   padding: 1em 0;
+
+  .navbar-nav .current > a {
+    color: @primaryColor !important;
+  }
+
+  .nav {
+    & > li {
+      text-align: center;
+
+      & > a {
+        &:hover, &:focus {
+          background-color: transparent;
+        }
+
+        &.dropdown-toggle {
+          i {
+            margin: -1px 0 0 3px;
+            font-size: 10px;
+            display: inline-table;
+          }
+        }
+      }
+
+      ul {
+        border: none;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);  
+
+        li a {
+          font-size: 0.9em;
+        }
+
+        .dropdown-header {
+          color: @primaryColor;
+        }
+      }
+    }
+  }
 }
-.navbar .navbar-nav .current > a {
-  color: @primaryColor !important;
+
+.navbar-brand {
+  padding: 7px 15px;
+
+  img {
+    max-width: 160px;
+  }
 }
-.navbar .nav > li > a:hover,
-.navbar .nav > li > a:focus {
-  background-color: transparent;
-}
-.navbar .nav > li > a.dropdown-toggle i {
-  margin: -1px 0 0 3px;
-  font-size: 10px;
-  display: inline-table;
-}
-.navbar .nav > li ul {
-  border: none;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-.navbar .nav > li ul li a {
-  font-size: 0.9em;
-}
-.navbar .nav > li ul .dropdown-header {
-  color: @primaryColor;
-}
-.navbar-brand img {
-  max-width: 160px;
-}
+
 .navbar-toggle {
   margin: 1.1em 0;
+
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background: @fontColor;
+  }
 }
-.navbar-toggle .icon-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-  background: @fontColor;
+
+@media(max-width: 768px) {
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.9);
+    ul {
+      width: 100%;
+    }
+  }
 }
+
+@media(min-width: 992px) {
+  .navbar-brand {
+    padding: 15px 15px;
+  }
+}
+
+
 .navbar-static-top,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   border-radius: 0;
 }
+
 .dropdown-header {
   text-transform: uppercase;
 }
+
 .cbp-af-header {
   position: fixed;
   top: 0;
@@ -146,71 +187,21 @@
 }
 .cbp-af-header.cbp-af-header-shrink h1 {
   font-size: 1.2em;
-  margin: 0.6em 0;
 }
 .cbp-af-header.cbp-af-header-shrink h1 a {
   color: black;
+  line-height: 40px;
 }
-/* Example Media Queries */
-@media screen and (max-width: 55em) {
-  .cbp-af-header .cbp-af-inner {
-    width: 100%;
-  }
-  .cbp-af-header h1,
-  .cbp-af-header .nav {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    float: none;
-  }
-  .cbp-af-header h1,
-  .cbp-af-header .nav a {
-    line-height: 115px;
-  }
-  .cbp-af-header .nav a {
-    margin: 0 10px;
-  }
-  .cbp-af-header.cbp-af-header-shrink h1,
-  .cbp-af-header.cbp-af-header-shrink .nav a {
-    line-height: 45px;
-  }
+
+@media(min-width: 992px) {
   .cbp-af-header.cbp-af-header-shrink h1 {
-    font-size: 2em;
-  }
-  .cbp-af-header.cbp-af-header-shrink .nav a {
-    font-size: 1em;
+    margin: 0;
+
   }
 }
-@media screen and (max-width: 32.25em) {
-  .cbp-af-header .nav a {
-    font-size: 1em;
-  }
-}
-@media screen and (max-width: 24em) {
-  .cbp-af-header .nav a,
-  .cbp-af-header.cbp-af-header-shrink .nav a {
-    line-height: 1;
-  }
-}
+
+
 @media (max-width: 992px) {
-  .cbp-af-header h1,
-  .cbp-af-header .nav a {
-    line-height: 72px;
-  }
-  .cbp-af-header.cbp-af-header-shrink h1 {
-    font-size: 1em;
-  }
-  .cbp-af-header h1 {
-    margin: 0 auto;
-  }
-  .cbp-af-header h1 a {
-    margin: 0.9em 0;
-  }
-  .cbp-af-header.cbp-af-header-shrink h1 a {
-    margin: 0.1em 0;
-  }
-}
-@media (max-width: 767px) {
   .navbar-collapse {
     background-color: rgba(255, 255, 255, 0.9);
   }
@@ -232,9 +223,6 @@
   .cbp-af-header {
     position: absolute;
   }
-  .cbp-af-header h1 a {
-    margin: 0.4em 0;
-  }
   .cbp-af-header .nav a {
     line-height: 2;
   }
@@ -244,6 +232,16 @@
   .cbp-af-header .nav a.btn {
     display: inline-block;
   }
+  .navbar-toggle {
+    .icon-bar {
+      width: 28px; // 22
+      height: 3px; // 2
+
+      & + .icon-bar {
+        margin-top: 6px; // 4
+      }
+    }
+  }
 }
 @media (max-width: 480px) {
   .cbp-af-header h1 {
@@ -251,5 +249,15 @@
   }
   .cbp-af-header .nav a.btn {
     display: block;
+  }
+  .navbar-toggle {
+    .icon-bar {
+      width: 22px; // 22
+      height: 2px; // 2
+
+      & + .icon-bar {
+        margin-top: 4px; // 4
+      }
+    }
   }
 }
