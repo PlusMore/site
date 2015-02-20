@@ -96,92 +96,7 @@ blockquote {
 .page-header {
   border-bottom: 0;
 }
-#intro-video {
-  background: url('/img/bg-videofallback.jpg');
-  background-size: cover;
-}
-#intro .item,
-#intro-video .item {
-  height: 100%;
-  position: relative;
-}
-#intro .container,
-#intro-video .container,
-#intro .row,
-#intro-video .row {
-  position: relative;
-  padding-top: 100px;
-}
-#intro .carousel-caption-center,
-#intro-video .carousel-caption-center {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  max-width: 80%;
-  max-height: 25%;
-  z-index: 10;
-  margin: auto;
-  text-align: center;
-}
-#intro .carousel-caption-center h1,
-#intro-video .carousel-caption-center h1 {
-  font-size: 3em;
-  font-weight: 800;
-  margin: 0 0 0.5em;
-}
-#intro .carousel-caption-center h2,
-#intro-video .carousel-caption-center h2 {
-  font-size: 1.8em;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
-}
-#intro .carousel-caption-center p,
-#intro-video .carousel-caption-center p {
-  font-size: 1.3em;
-  font-weight: 400;
-  margin: 1em 10em;
-}
-#intro .carousel-caption-left,
-#intro-video .carousel-caption-left {
-  position: absolute;
-  left: 29px;
-  bottom: 15%;
-  max-width: 550px;
-  z-index: 10;
-}
-#intro .carousel-caption-left h1,
-#intro-video .carousel-caption-left h1 {
-  font-size: 3em;
-  font-weight: 800;
-  margin: 0 0 0.5em;
-}
-#intro .carousel-caption-left h2,
-#intro-video .carousel-caption-left h2 {
-  font-size: 1.8em;
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
-}
-#intro .carousel-caption-left p,
-#intro-video .carousel-caption-left p {
-  font-size: 1.3em;
-  font-weight: 100;
-  line-height: 1.8;
-  color: rgba(255, 255, 255, 0.8);
-}
-#intro .carousel-caption-left .btn,
-#intro-video .carousel-caption-left .btn {
-  margin: 1em 0;
-  padding: 1em 2em;
-  background: #88b7b3;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-#intro .carousel-caption-left .btn:hover,
-#intro-video .carousel-caption-left .btn:hover {
-  background: #68a49f;
-}
+
 .overlay-bg {
   position: absolute;
   top: 0;
@@ -519,26 +434,6 @@ blockquote {
   margin-top: 7em;
 }
 
-@media (max-width: 1199px) {
-  #intro .carousel-caption-center,
-  #intro-video .carousel-caption-center {
-    max-height: 258px;
-  }
-  #intro .carousel-caption-center p,
-  #intro-video .carousel-caption-center p {
-    margin: 1em 2em;
-  }
-  #intro .player,
-  #intro-video .player,
-  #intro .mbYTP_wrapper,
-  #intro-video .mbYTP_wrapper {
-    display: none;
-  }
-  footer.footer h2 {
-    font-size: 1.7em;
-    margin-bottom: 0.7em;
-  }
-}
 @media (max-width: 991px) and (min-width: 768px) {
   #pricing .plan {
     max-width: 400px;
@@ -559,36 +454,6 @@ blockquote {
   }
   section {
     text-align: center;
-  }
-  #intro .carousel-caption-center,
-  #intro-video .carousel-caption-center {
-    max-height: 192px;
-  }
-  #intro .carousel-caption-center h1,
-  #intro-video .carousel-caption-center h1 {
-    font-size: 1.7em;
-    line-height: 1.4;
-    margin-right: 0;
-  }
-  #intro .carousel-caption-center h2,
-  #intro-video .carousel-caption-center h2 {
-    font-size: 1.3em;
-  }
-  #intro .carousel-caption-center p,
-  #intro-video .carousel-caption-center p {
-    font-size: 1em;
-    padding-right: 0;
-    margin: 1em 0;
-  }
-  #intro .carousel-caption-center .btn,
-  #intro-video .carousel-caption-center .btn {
-    padding: 0.8em 1.5em;
-  }
-  #intro .player,
-  #intro-video .player,
-  #intro .mbYTP_wrapper,
-  #intro-video .mbYTP_wrapper {
-    display: none;
   }
   #featured1,
   #featured2 {
@@ -628,12 +493,6 @@ blockquote {
   .contact-form {
     width: 100%;
   }
-  footer.footer .row {
-    text-align: center;
-  }
-  footer.footer .row .col-md-3 {
-    margin-bottom: 5em;
-  }
 }
 @media (max-width: 480px) {
   .cbp-af-header h1 {
@@ -641,21 +500,6 @@ blockquote {
   }
   .cbp-af-header .nav a.btn {
     display: block;
-  }
-  #intro .carousel-caption-center h1,
-  #intro-video .carousel-caption-center h1 {
-    font-size: 1.8em;
-    line-height: 1.4;
-    margin-right: 0;
-  }
-  #intro .carousel-caption-center h2,
-  #intro-video .carousel-caption-center h2 {
-    font-size: 1.4em;
-  }
-  #intro .carousel-caption-center p,
-  #intro-video .carousel-caption-center p {
-    font-size: 1em;
-    padding-right: 0;
   }
   #testimonials ul {
     padding-left: 0;
@@ -682,5 +526,10 @@ blockquote {
   }
   .overlay #contactForm input {
     padding: 1.5em 1em;
+  }
+}
+@media (min-height: 1024px) {
+  #intro .container, #intro-video .container, #intro .row, #intro-video .row {
+    padding-top: 140px;
   }
 }
