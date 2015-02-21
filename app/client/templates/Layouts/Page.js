@@ -1,6 +1,7 @@
 Template.Page.rendered = function () {
   App.fullScreenContainer();
 
+  scrollPage(this.$('.page'));
   this.$('.page').on('scroll', scrollPage);
 
   this.$('.nav', '#page-nav').onePageNav({
@@ -28,3 +29,11 @@ function _scrollPage(e) {
 }
 
 scrollPage = _.throttle(_scrollPage, 250);
+
+Template.Page.events({
+  'click .js-request-demo': function () {
+    BootstrapModalPrompt.prompt({
+      dialogTemplate: Template.RequestDemoModal
+    });
+  }
+});
