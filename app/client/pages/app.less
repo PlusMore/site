@@ -17,11 +17,12 @@ section {
     font-size: @20px;
     text-transform: uppercase;
   }
+
 }
 
 section.content {
   h1 {
-    margin-bottom: 24px;
+    margin-bottom: .5em;
   }
   
   p {
@@ -34,6 +35,10 @@ section.content {
 
   img {
     margin: auto;
+  }
+
+  header {
+    margin-bottom: 50px;
   }
 }
 
@@ -78,12 +83,34 @@ section .overlay-text {
   z-index: 10;
 }
 
+section {
+  .thumbnail {
+    background: transparent;
+    box-shadow: none;
+    border: none;
 
+    .caption {
+      h3 {
+        line-height: 1.5em;
+        font-size: @21px;
+      }
+      p {
+        font-size: @16px;
+      }
+    }
+  }
+}
 
 @media (min-width: 768px) {
   section {
     padding: 4em 0;
     text-align: center;
+
+    header {
+      p {
+        padding: 0 50px;
+      }
+    }
   }
 }
 
