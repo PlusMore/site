@@ -5,36 +5,29 @@ footer#footer {
   padding: 5em 0;
   color: white;
 
-  .footer-logo {
-    padding: 0 1em;
-
-    h2 {
-      color: #fff;
-    }
-
-    p, a {
-      font-size: 0.9em;
-      margin-right: 10px;
-      color: #fff;  
-    }
-
-    a:hover {
-      color: #fff;
-      text-decoration: none;    
-    }
-
+  h2 {
+    color: #fff;
   }
-  
+
+  p, a {
+    color: #fff;  
+  }
+
+  a:hover {
+    color: #fff;
+    text-decoration: none;    
+  }
+
   h2 {
     text-transform: uppercase;
   }
 
-  h3 {
-    text-transform: uppercase;
-    font-size: 1.1em;
-    margin-top: 2.1em;
-    margin-bottom: 1em;
+  .company-info {
+    address {
+      font-size: 14px;
+    }  
   }
+  
 
   .label {
     font-weight: 400;
@@ -59,14 +52,7 @@ footer#footer {
   }
 
   .copyright {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 2;
-    font-weight: 200;
     letter-spacing: 0.7px;
-  }
-
-  .logo {
-    padding: 1em 0 0;
   }
 
   .icon {
@@ -77,24 +63,34 @@ footer#footer {
     width: auto;
     height: auto;
   }
-}
 
-@media (max-width: 1199px) {
-  footer#footer h2 {
-    font-size: 1.7em;
-    margin-bottom: 0.7em;
-  }
-  footer#footer .row {
-    text-align: center;
-  }
-  footer#footer .row .col-md-3 {
-    margin-bottom: 5em;
+  #links {
+    margin-bottom: 60px;
   }
 }
 
-@media (max-width: 767px) {
-  footer#footer h2 {
-    font-size: 1.7em;
-    margin-bottom: 0.7em;
+@media(min-width: 768px) {
+  footer#footer {
+    text-align: initial;
+
+    .footer-logo {
+      .icon {
+        font-size: 9em;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .company-info {
+      text-align: right;
+    }
+
+    #links {
+      margin-bottom: 0px;
+      padding-left: 50px;
+    }
   }
 }
