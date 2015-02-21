@@ -10,3 +10,11 @@ Tracker.autorun(function() {
   }
   return Session.set('shrinkHeader', false);
 });
+
+Template.Header.events({
+  'click .js-request-demo': function () {
+    BootstrapModalPrompt.prompt({
+      dialogTemplate: Template.RequestDemoModal
+    });
+  }
+});
