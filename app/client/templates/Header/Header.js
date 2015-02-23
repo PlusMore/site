@@ -22,7 +22,8 @@ Tracker.autorun(function() {
 });
 
 Template.Header.events({
-  'click .js-request-demo': function () {
+  'click .js-request-demo': function (e) {
+    e.preventDefault();
     BootstrapModalPrompt.prompt({
       dialogTemplate: Template.RequestDemoModal
     });
