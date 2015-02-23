@@ -1,0 +1,96 @@
+@import '/client/style/imports.import.less';
+
+footer#footer {
+  background: #2b2d35;
+  padding: 5em 0;
+  color: white;
+
+  h2 {
+    color: #fff;
+  }
+
+  p, a {
+    color: #fff;  
+  }
+
+  a:hover {
+    color: #fff;
+    text-decoration: none;    
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .company-info {
+    address {
+      font-size: @14px;
+    }  
+  }
+  
+
+  .label {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  ul {
+    padding-left: 0;
+    li {
+      display: block;
+
+      a {
+        color: #fff;
+        font-size: @14px;
+
+        &:hover {
+          color: #fff;
+          text-decoration: none;        
+        }
+      }
+    }
+  }
+
+  .copyright {
+    letter-spacing: 0.7px;
+  }
+
+  .icon {
+    font-size: 4.5em;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+  }
+
+  #links {
+    margin: 60px 0;
+  }
+}
+
+@media(min-width: 768px) {
+  footer#footer {
+    text-align: initial;
+
+    .footer-logo {
+      .icon {
+        font-size: 9em;
+        color: #fff;
+        text-align: center;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .company-info {
+      text-align: right;
+    }
+
+    #links {
+      margin: 0 0;
+      padding-left: 50px;
+    }
+  }
+}

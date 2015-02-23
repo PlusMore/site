@@ -1,0 +1,28 @@
+<template name="RequestDemoModal">
+  <div class="modal-dialog">
+    <i class="icon icon-x close" data-dismiss="modal"></i>
+    <div class="modal-content">
+      <div class="col-sm-6 no-padding">
+        <div class="modal-header">
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+          <h1 class="modal-title" id="myModalLabel">We want to hear you out!</h1>
+          <p class="lead">Let PlusMore join your hotel</p>
+        </div>  
+      </div>
+
+      <div class="col-sm-6 no-padding">
+        {{#autoForm id='requestDemo' schema=requestDemoSchema type="method" meteormethod="requestDemo" resetOnSuccess=false}}
+        <div class="modal-body">
+          {{> afQuickField name="name" placeholder="Name"}}
+          {{> afQuickField name="email" placeholder="Email"}}
+          {{> afQuickField name="phone" placeholder="Phone Number"}}
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-lg btn-default btn-block">Send</button>
+        </div>
+        {{/autoForm}}
+      </div>
+      
+    </div>
+  </div>
+</template>

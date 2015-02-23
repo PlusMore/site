@@ -1,0 +1,59 @@
+<template name="Footer">
+  <footer id="footer" class="text-center light">
+    <div class="container">    
+      <div class="row">
+
+        <div class="col-xs-12 visible-xs">
+          <button class="btn btn-lg btn-round btn-primary js-request-demo">
+            REQUEST A DEMO
+          </button>
+        </div>
+        
+        <div id="links" class="col-xs-12 col-sm-2">
+          <h2>Links</h2>
+          <ul>
+            <li>
+              <a href="{{pathFor 'Home'}}">Overview</a>
+            </li>
+            <li>
+              <a href="{{pathFor 'Product'}}">Product</a>
+            </li>
+            <li>
+              <a href="{{pathFor 'Product'}}">Company</a>
+            </li>
+            <li>
+              <a href="{{pathFor 'Home'}}">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="{{pathFor 'Home'}}">Terms of Use</a>
+            </li>
+          </ul>
+        </div>
+
+        <div id="demo" class="col-xs-12 col-sm-3 hidden-xs">
+          <h2>Demo</h2>
+          <button class="btn btn btn-primary js-request-demo">
+            REQUEST A DEMO
+          </button>
+        </div>
+      
+        <div class="col-xs-12 col-sm-2 col-sm-push-5">
+          <div class="footer-logo">
+            <i class="icon icon-logo"></i>  
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="company-info">
+              <h2>PlusMore</h2>
+              <address>
+                1150 Avenue of the Americas <br>
+                New York, NY 10036<br>
+                +1 (917) 475-1919
+              </address>
+              <p class="copyright muted">© 2014 PlusMore Inc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>

@@ -1,0 +1,8 @@
+<template name="SiteLayout">
+  {{> Loader}}
+  {{> Header}}
+
+  {{#momentum plugin='iron-router' options=transition}}
+    {{> yield}}
+  {{/momentum}}  
+</template>
