@@ -1,16 +1,3 @@
-/* -- Full Screen Viewport Container
-   ---------------------------- */
-
-Meteor.startup(function() {
-  console.log('startup');
-  fullScreenContainer();
-});
-
-$(window).load(function(){
-  console.log('loaded');
-  $('.app-loader').fadeOut(1000); // set duration in brackets
-});
-
 App = function() {
 
     $(function() {
@@ -19,8 +6,6 @@ App = function() {
         widgetClose();
         widgetFlip();
         tooltips();
-        onePageScroll();
-        scrollAnchor();
     });
 
     // if the user is using ios we want to know so we can adjust the header to account for the top bar
@@ -66,26 +51,7 @@ App = function() {
       $('.tooltips').tooltip(); 
     }
 
-    function onePageScroll() {
-      $('.nav').onePageNav({
-          currentClass: 'current',
-          changeHash: false,
-          scrollSpeed: 650,
-          scrollOffset: 30,
-          scrollThreshold: 0.5,
-          filter: ':not(.login, .signup)',
-          easing: 'swing',
-          begin: function() {
-              //I get fired when the animation is starting
-          },
-          end: function() {
-              //I get fired when the animation is ending
-          },
-          scrollChange: function($currentListItem) {
-              //I get fired when you enter a section and I pass the list item of the section
-          }
-      });
-    }
+    
 
 
     $(window).scroll(function() {
@@ -100,27 +66,6 @@ App = function() {
 
     window.scrollReveal = new scrollReveal();
       
-
-
-    /* --- Scroll to Anchor ------------------- */
-
-    function scrollAnchor() {
-
-      // scroll to specific anchor
-      $('.scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 650);
-            return false;
-          }
-        }
-      });
-      
-    }
 
     //Placeholder fixed for Internet Explorer
     $(function() {
@@ -170,48 +115,42 @@ App = function() {
         dangerDark: "#962d22"
     }
 
+    var fullScreenContainer = function() {
+
+      // Set Initial Screen Dimensions
+
+      var screenWidth = $(window).width() + "px";
+      var screenHeight = $(window).height() + "px";
+
+      $(".full-screen-container").css({
+        width: screenWidth,
+        height: screenHeight
+      });
+
+    };
+
     //return functions
     return {
         colors: colors,
         customCheckbox: customCheckbox,
-        maskInputs: maskInputs
+        maskInputs: maskInputs,
+        fullScreenContainer: fullScreenContainer
     };
 }();
 
+Meteor.startup(function() {
+  console.log('startup');
+  App.fullScreenContainer();
 
-/* --- Full Screen Container ------------- */
+  $(window).on('resize', App.fullScreenContainer);
+});
 
-function fullScreenContainer() {
+$(window).load(function(){
+  console.log('loaded');
+  $('.app-loader').fadeOut(1000); // set duration in brackets
+});
 
-  // Set Initial Screen Dimensions
 
-  var screenWidth = $(window).width() + "px";
-  var screenHeight = $(window).height() + "px";
-
-  $("#intro, #intro .item, #intro-video").css({
-    width: screenWidth,
-    height: screenHeight
-  });
-
-  // Every time the window is resized...
-
-  $(window).resize( function () {
-
-    // Fetch Screen Dimensions
-
-    var screenWidth = $(window).width() + "px";
-    var screenHeight = $(window).height() + "px";
-      
-    // Set Slides to new Screen Dimensions
-    
-    $("#intro, #intro .item, #intro-video, #intro-video .item").css({
-      width: screenWidth,
-      height: screenHeight
-    }); 
-      
-  });
-
-}
 
 
 

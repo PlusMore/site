@@ -19,3 +19,6 @@ aldeed:simple-schema
 aldeed:autoform
 email
 plusmore:plus-more-icons
+iron:router
+percolate:momentum-iron-router
+iron:layout

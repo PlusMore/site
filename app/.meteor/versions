@@ -24,6 +24,14 @@ htmljs@1.0.3
 http@1.0.10
 id-map@1.0.2
 insecure@1.0.2
+iron:controller@1.0.7
+iron:core@1.0.7
+iron:dynamic-template@1.0.7
+iron:layout@1.0.7
+iron:location@1.0.7
+iron:middleware-stack@1.0.7
+iron:router@1.0.7
+iron:url@1.0.7
 jquery@1.11.3
 json@1.0.2
 launch-screen@1.0.1
@@ -44,6 +52,9 @@ nemo64:bootstrap-data@3.3.1_1
 observe-sequence@1.0.4
 ordered-dict@1.0.2
 patrickleet:enquire@2.2.0_1
+percolate:momentum@0.6.0
+percolate:momentum-iron-router@0.7.0
+percolate:velocityjs@1.0.0
 plusmore:plus-more-icons@1.0.0
 plusmore:reactive-responsive-helpers@1.0.0
 random@1.0.2
