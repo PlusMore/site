@@ -30,8 +30,15 @@
               <li><a href="#end-to-end">Our Solution</a></li>
             </ul> -->
             <ul class="nav navbar-nav">
-              <li><a href="{{pathFor 'Product'}}">Product</a></li>
-              <li><a href="#" class="js-request-demo">Contact Us</a></li>
+              <li class="{{currentRouteClass 'Home'}}">
+                <a href="{{pathFor 'Home'}}">Overview</a>
+              </li>
+              <li class="{{currentRouteClass 'Product'}}">
+                <a href="{{pathFor 'Product'}}">Product</a>
+              </li>
+              <li>
+                <a href="#" class="js-request-demo">Contact Us</a>
+              </li>
             </ul>
           </div>
         </div>
