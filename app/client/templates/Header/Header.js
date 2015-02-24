@@ -12,6 +12,9 @@ Template.Header.helpers({
 
     return '';
   },
+  menuIsOpen: function() {
+    return Session.equals('menuIsOpen', true) ? 'menu-open' : '';
+  }
 });
 
 Tracker.autorun(function() {
@@ -27,5 +30,18 @@ Template.Header.events({
     BootstrapModalPrompt.prompt({
       dialogTemplate: Template.RequestDemoModal
     });
+  },
+  'click #navbar-collapse.navbar-collapse.in': function(e, tmpl) {
+    if( tmpl.$(e.target).is('a') && tmpl.$(e.target).attr('class') != 'dropdown-toggle' ) {
+      console.log('hide')
+
+      tmpl.$(e.target).closest('.navbar-collapse').collapse('hide');
+    }
+  },
+  'show.bs.collapse #navbar-collapse.navbar-collapse': function() {
+    Session.set('menuIsOpen', true);
+  },
+  'hide.bs.collapse #navbar-collapse.navbar-collapse': function() {
+    Session.set('menuIsOpen', false);
   }
 });
