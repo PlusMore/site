@@ -4,7 +4,7 @@
       <!-- Fixed navbar -->
       <div class="navbar cbp-af-inner" role="navigation">
         <div class="container-fluid">
-          <div class="navbar-header">
+          <div class="navbar-header {{menuIsOpen}}">
             <div class="container-fluid">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -20,7 +20,7 @@
               </h1>  
             </div>
           </div>
-          <div class="navbar-collapse collapse">
+          <div id="navbar-collapse" class="navbar-collapse collapse">
             <!-- <ul id="site-nav" class="nav navbar-nav">
               <li><a href="{{pathFor 'Product'}}">Product</a></li>
             </ul>
